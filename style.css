@@ -108,7 +108,6 @@ h1 {
 
 .intro {
   max-width: var(--text-measure);
-  margin-bottom: 4rem;
   font-size: clamp(1.12rem, 2vw, 1.35rem);
 }
 
