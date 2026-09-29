@@ -5,7 +5,7 @@
 </style></head><body>
 <header><h1>Attachment triage · fictional preview</h1><a href="#" id="exportPreview" download="attachment-triage.csv">Export decisions CSV</a></header>
 <main>
-<p class="hint">Entirely fictional preview. Changes last only in this tab; reload to reset. Use the Python demo for persistent decisions.</p>
+<p class="hint">Changes in this preview last only until the page is reloaded.</p>
 <div class="filters">
 <label>Search<input id="q" type="search" placeholder="Filename, subject, sender…"></label>
 <label>File type<select id="extension"><option value="">All types</option></select></label>
@@ -22,7 +22,7 @@
 <div id="error" role="alert"></div>
 <div class="table-wrap"><table><thead><tr><th>Attachment / type</th><th>Email / sender</th><th>Date / direction</th><th>Size</th><th>Decision</th><th>Template</th></tr></thead><tbody id="rows"></tbody></table></div>
 <div class="pager"><button id="prev">Previous</button><span id="page"></span><button id="next">Next</button><span class="hint">100 rows per page</span></div>
-<details id="help"><summary>Review notes and keyboard shortcuts</summary><p class="hint">Select a row, then P = possible feedback, R = rejected, U = unreviewed, T = toggle template; J/K = next/previous row. Click a filename for context.</p><p class="hint">Template means a recurring form, independently of your decision. Outgoing-only attachments are hidden by default; attachments also received remain visible. Unknown direction stays visible. Sender and date filters must match the same email occurrence.</p><p class="hint">This preview keeps decisions in memory; the Python application saves them to a separate SQLite database. Export includes all attachments and decisions, including hidden rows. No document extraction or classification runs here. Cached document evidence may contain quoted or outgoing text: it is context, not a new incoming message.</p><p id="source" class="hint"></p><p id="missing" class="hint"></p></details>
+<details id="help"><summary>Review notes and keyboard shortcuts</summary><p class="hint">Select a row, then P = possible feedback, R = rejected, U = unreviewed, T = toggle template; J/K = next/previous row. Click a filename for context.</p><p class="hint">Template means a recurring form, independently of your decision. Outgoing-only attachments are hidden by default; attachments also received remain visible. Unknown direction stays visible. Sender and date filters must match the same email occurrence.</p><p class="hint">This preview keeps decisions in memory. The original application saves them to a separate SQLite database. Export includes all attachments and decisions, including hidden rows. No document extraction or classification runs here.</p><p id="source" class="hint"></p><p id="missing" class="hint"></p></details>
 </main>
 <dialog id="detail"><button id="closeDetail" style="float:right">Close</button><h2 id="detailTitle"></h2><div id="detailBody"></div></dialog>
 <script>
