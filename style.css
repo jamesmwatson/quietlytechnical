@@ -1,13 +1,14 @@
-/* Quietly Technical — minimal one-page stylesheet */
+/* Quietly Technical — deep grey-blue one-page stylesheet */
 
 :root {
-  --page: #d9e0e4;
-  --panel: #cfd8dd;
-  --ink: #1f2a30;
-  --muted: #56636b;
-  --line: #aebbc2;
-  --accent: #425c6b;
-  --accent-dark: #263f4d;
+  --page: #263441;
+  --panel: #314252;
+  --ink: #e8edf1;
+  --muted: #aebbc5;
+  --line: #506273;
+  --accent: #9eb3c2;
+  --accent-strong: #d2e1ea;
+  --body-copy: #cbd5db;
 
   --measure: 72rem;
   --text-measure: 46rem;
@@ -40,14 +41,14 @@ body {
 }
 
 a {
-  color: var(--accent-dark);
+  color: var(--accent-strong);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.18em;
 }
 
 a:hover,
 a:focus-visible {
-  color: #111c22;
+  color: #ffffff;
 }
 
 .page {
@@ -71,7 +72,7 @@ a:focus-visible {
   flex: 0 0 auto;
   border: 1px solid var(--accent);
   border-radius: 50%;
-  color: var(--accent-dark);
+  color: var(--accent-strong);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.65rem;
   line-height: 1;
@@ -111,6 +112,10 @@ h1 {
   font-size: clamp(1.12rem, 2vw, 1.35rem);
 }
 
+.intro p {
+  color: var(--ink);
+}
+
 section {
   padding: 2.2rem 0;
   border-top: 1px solid var(--line);
@@ -137,15 +142,18 @@ h3 {
 
 .grid article {
   padding: 1.15rem;
-  background: color-mix(in srgb, var(--panel) 82%, transparent);
+  background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
 .grid p,
 .project p {
+  color: var(--body-copy);
+}
+
+.grid p {
   margin-bottom: 0;
-  color: #344149;
 }
 
 .project-list {
@@ -158,6 +166,19 @@ h3 {
 
 .project + .project {
   border-top: 1px solid var(--line);
+}
+
+.project p {
+  margin-bottom: 0.75rem;
+}
+
+.project-link {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.project-link a {
+  font-weight: 600;
 }
 
 .links {
